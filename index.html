@@ -257,6 +257,7 @@
                         <li>Different types of relations, one to one, one to many, many to one, many to many</li>
                     </ul>
                 </section>
+
                 <section>
                     <h2>But why just not one giant table?</h2>
                     <ul>
@@ -280,39 +281,101 @@
                     <!-- Creating a Database -->
                     <section>
                         <h2>Creating a Database</h2>
-                        
+                        <p>Time to explore PHP My Admin!</p>
                     </section>
                     <!-- Defining a Schema -->
                     <section>
                         <h2>Defining a Schema</h2>
+                        <p>A schema is a fancy word for the structure of your database</p>
+                        <ul>
+                            <li>There is a lot to good schema design, but lets not worry about that now</li>
+                            <li>The way you structure your data effects how easy it is to preform certian types of queries</li>
+                        </ul>
                     </section>
                     <section>
                         <h2>Connecting</h2>
-
+                        <p>To connect to a database you need at least 3 things</p>
+                        <ul>
+                            <li>Host</li>
+                            <li>Database user</li>
+                            <li>Database user password</li>
+                        </ul>
+                        <p>We will be using PDO, a PHP 'binding' for MySQL which will do most of the heavy lifting for us</p>
+                    </section>
+                    <section>
+                        <h2>DBAL</h2>
+                        <p>DataBase Abstraction Layer (DBAL) is a term used to describe a tool that serves as an interface to a database.  For our purposes PDO is this tool, exposed to us as a standard library.</p>
+                        <ul>
+                            <li>Its an object</li>
+                            <li>We will provide our PDO object with instructions by calling its methods, and giving it things to do.</li>
+                        </ul>
                     </section>
                     <!-- Insert -->
                     <section>
                         <h2>Inserting Records</h2>
+                        <p>This is the primary way to add new data</p>
+                        <ul>
+                            <li>INSERT INTO tableName (col1, col2, col3) VALUES (val1, val2, val3)</li>
+                        </ul>
+
+                    </section>
+                    <section>
+                        <h2>Lets develop it!</h2>
+                        <p>We are going to be importing a CSV (comma seperated variable) file into our database, then reading it into a table on a webpage!</p>
+                        <ul>
+                            <li>Look at the file to see what our column names should be</li>
+                            <li>Create a new database</li>
+                            <li>create a table called crime_by_state</li>
+                            <li>add the right columns with their types</li>
+                            <li>Create a php file to parse your CSV file, the first row of text are the headers.</li>
+                            <li>We want to read a line, parse the string into an array, and use that array to generate our insert statement</li>
+                            <li>execute the statement and repeat until there are no more lines</li>
+                            <li>Run our script!</li>
+                            <li>check it</li>
+                        </ul>
                     </section>
                     <!-- Updating -->
                     <section>
                         <h2>Updating Records</h2>
+                        <p>UPDATE tableName SET colname = val1, colname2 = val2 WHERE conditonal</p>
                     </section>
                     <!-- Queries -->
                     <section>
                         <h2>Selecting Records</h2>
+                        <p>This is where the bulk of a databases power comes in.  We can create queries to give us data in almost any manner we'd like.</p>
+                        <li>SELECT * FROM tableName WHERE conditional ORDER BY column_name, column_name ASC|DESC</li>
+                        <li>WHERE can use things like AND , and, OR to make more complex conditionals, SQL also has a series of functions you can leverage, like SUM and AVG, or time functions like NOW</li>
+                        <li>Lets experiment with some queries against our records!</li>
                     </section>
                     <!-- Deleting -->
                     <section>
                         <h2>Removing Records</h2>
+                        <p>Deleting things is permant!!! Normally in SQL databases things are never deleted, just 'soft deleted' or flagged so they are not returned in result sets</p>
+                        <ul>
+                            <li>DELETE FROM tableName WHERE condtional</li>
+                        </ul>
                     </section>
                     <!-- Relations -->
                     <section>
                         <h2>Relations and Joins</h2>
+                        <p>This is where SQL is very defferent from other database, and along side its powerful Queries, another distinguishing feature.</p>
+                        <ul>
+                            <li>Primary Keys</li>
+                            <li>Foriegn Keys</li>
+                            <li>Normal Join</li>
+                            <li>Left Join - returns all rows from the left table (table1), with the matching rows in the right table (table2)</li>
+                            <li>Right Join - returns all rows from the right table (table2), with the matching rows in the left table (table1). </li>
+                        </ul>
+                        <p>SELECT * FROM table1 JOIN table2 ON table1.column_name=table2.column_name</p>
                     </section>
                 </section>
                 <section>
                     <h2>Whats next?</h2>
+                    <ul>
+                        <li>More detail, questions, more coding?!?!</li>
+                        <li>Talk more about how things come together</li>
+                        <li>What to do over the next week</li>
+                    </ul>
 
                 </section>
 
