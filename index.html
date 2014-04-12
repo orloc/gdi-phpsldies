@@ -379,6 +379,50 @@
 
                 </section>
 
+                <section>
+                    <section>
+                        <h2>Building a Blog</h2>
+                        <p>The objective is to build the back end for an admin panel which manages a blog.</p>
+                        <ul>
+                            <li>We are focusing on the admin panel as there is more functionality.  Any 'user facing' website would just retrieved records, and maybe sort them / styled them differently.</li>
+                            <li>We have provided you with HTML / CSS templates which you can edit.</li>
+                            <li>Lets look it over!</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Instructions</h2>
+                        <h4>Step 1: Set Up the Database</h4>
+                        <ul>
+                            <li>Create a database!</li>
+                            <li>Make a table called 'posts'</li>
+                            <li>Your columns should be: id / title / author / body / tags/ created_at.. try and figure out what type they should be! If you have questions please ask!</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Step 2: Controller</h4>
+                        <p>This is probably where most of the time will be spent, the controller contains most of our logic</p>
+                        <ul>
+                            <li>We have 2 main files for each page, and a shared model.</li>
+                            <li>Open the admin_controller.php file</li>
+                            <li>This file needs to do the following things:
+                                <ul>
+                                    <li>check to see if the request is a POST</li>
+                                    <li>IF its a post, grab the POST data, sanitize it, and use PDO to enter it in the database</li>
+                                    <li>ALWAYS, after handling the post, query the database, and return a list of posts to the view</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Step 3: PHP Templating!</h4>
+                        <ul>
+                            <li>Create a database!</li>
+                            <li>Make a table called 'posts'</li>
+                            <li>Your columns should be: id / title / author / body / tags/ created_at.. try and figure out what type they should be! If you have questions please ask!</li>
+                        </ul>
+                    </section>
+                </section>
+
 			</div>
 
 		</div>
